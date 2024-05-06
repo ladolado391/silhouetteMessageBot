@@ -23,7 +23,7 @@ server.post("/webhook", (req, res) => {
 });
 
 // Add support for GET requests to our webhook
-app.get("/messaging-webhook", (req, res) => {
+server.get("/messaging-webhook", (req, res) => {
     // Parse the query params
       let mode = req.query["hub.mode"];
       let token = req.query["hub.verify_token"];
