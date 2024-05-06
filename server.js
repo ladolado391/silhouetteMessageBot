@@ -7,6 +7,11 @@ server.listen(PORT, () => {
     console.log(`express server is listening on port: ${PORT}`)
 })
 
+server.get("/", (req, res) => {
+  console.log("success");
+  res.status(200).send("server contacted, success");
+});
+
 server.post("/webhook", (req, res) => {
     let body = req.body;
     console.log(`\u{1F7EA} Received webhook:`);
